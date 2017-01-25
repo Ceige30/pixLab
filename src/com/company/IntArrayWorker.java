@@ -102,29 +102,40 @@ public class IntArrayWorker
   }
   public int getCount(int a) {
     int count = 0;
-    for (int row = 0; row < matrix[0].length; row++) {
-      for (int col = 0; col < matrix[0].length; col++) {
-        if (matrix[row][col] == a)
-          count++;
-      }
-
+    try{
+      for (int row = 0; row < matrix[0].length; row++) {
+        for (int col = 0; col < matrix[0].length; col++) {
+          if (matrix[row][col] == a)
+            count++;
+          }
+        }
+    }
+    catch(java.lang.NullPointerException e){
     }
     return count;
   }
-  public int getLargest()
-  {
+
+  public int getLargest() {
     int largVal = 0;
-    for(int row=0; row<matrix.length; row++)
-      for(int column=0; column<matrix[0].length; column++)
-        if(matrix[row][column] > largVal)
-          largVal = matrix[row][column];
+    try {
+      for (int row = 0; row < matrix.length; row++)
+        for (int column = 0; column < matrix[0].length; column++)
+          if (matrix[row][column] > largVal)
+            largVal = matrix[row][column];
+    }catch(java.lang.NullPointerException e){
+    }
     return largVal;
   }
+
   public int getColTotal(int b)
   {
     int total = 0;
+    try{
     for(int row = 0; row< matrix.length; row++)
       total = total + matrix[row][b];
+
+  }catch(java.lang.NullPointerException e){
+    }
     return total;
   }
 
