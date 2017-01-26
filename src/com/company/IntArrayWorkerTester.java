@@ -24,7 +24,7 @@ public class IntArrayWorkerTester
   }
 
   /** Method to test getCount*/
-public static void testGetCount()
+  public static void testGetCount()
   {
     IntArrayWorker worker = new IntArrayWorker();
     int[][] nums = new int[3][4];
@@ -95,7 +95,6 @@ public static void testGetCount()
 
   public static void main(String[] args)
   {
-
     testSetMatrix();
     testFillPattern1();
     testGetCount();

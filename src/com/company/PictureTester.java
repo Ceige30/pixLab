@@ -5,8 +5,8 @@ package com.company;
  * that will help you test the Picture class 
  * methods.  Uncomment the methods and the code
  * in the main to test.
- * 
- * @author Barbara Ericson 
+ *
+ * @author Barbara Ericson
  */
 public class PictureTester
 {
@@ -18,7 +18,7 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
-  
+
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -27,7 +27,7 @@ public class PictureTester
     caterpillar.mirrorVertical();
     caterpillar.explore();
   }
-  
+
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -36,15 +36,14 @@ public class PictureTester
     temple.mirrorTemple();
     temple.explore();
   }
-  
+
   /** Method to test the collage method */
   public static void testCollage()
   {
     Picture canvas = new Picture("640x480.jpg");
-    canvas.createCollage();
     canvas.explore();
   }
-  
+
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
@@ -52,21 +51,21 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
-  
+
   /** Main method for testing.  Every class can have a main
-    * method in Java */
+   * method in Java */
   public static void main(String[] args)
   {
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    //testKeepOnlyBlue();
+    //testZeroBlue();
+    testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
-    //testFixUnderwater();
+    testNegate();
+    testGreyscale();
+    testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();
@@ -83,4 +82,35 @@ public class PictureTester
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
   }
+
+  private static void testKeepOnlyBlue() {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyBlue();
+    beach.explore();
+  }
+  private static void testNegate() {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+  }
+
+
+  private static void testGreyscale() {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.greyscale();
+    beach.explore();
+  }
+
+  private static void testFixUnderwater() {
+    Picture beach = new Picture("water.jpg");
+    beach.explore();
+    beach.fixUnderwater();
+    beach.explore();
+  }
+  //Totes not spam
+
+
 }
